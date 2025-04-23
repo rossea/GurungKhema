@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="eight-GurungKhema" format="2">
+  <advance width="922"/>
+  <unicode hex="16138"/>
+  <outline>
+    <contour>
+      <point x="555" y="63"/>
+      <point x="502" y="8"/>
+      <point x="463" y="8" type="qcurve"/>
+      <point x="377" y="8"/>
+      <point x="377" y="102" type="qcurve"/>
+      <point x="377" y="141"/>
+      <point x="427" y="197"/>
+      <point x="465" y="197" type="qcurve"/>
+      <point x="505" y="197"/>
+      <point x="555" y="142"/>
+      <point x="555" y="102" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="100" y="702" type="line"/>
+      <point x="100" y="782"/>
+      <point x="137" y="848" type="qcurve"/>
+      <point x="234" y="1022"/>
+      <point x="463" y="1024" type="qcurve"/>
+      <point x="650" y="1026"/>
+      <point x="733" y="924" type="qcurve"/>
+      <point x="784" y="862"/>
+      <point x="799" y="823" type="qcurve"/>
+      <point x="817" y="778"/>
+      <point x="817" y="702" type="qcurve"/>
+      <point x="817" y="0" type="line"/>
+      <point x="713" y="0" type="line"/>
+      <point x="713" y="700" type="line"/>
+      <point x="713" y="757"/>
+      <point x="694" y="791" type="qcurve"/>
+      <point x="624" y="915"/>
+      <point x="457" y="915" type="qcurve"/>
+      <point x="236" y="915"/>
+      <point x="207" y="702" type="qcurve"/>
+      <point x="207" y="0" type="line"/>
+      <point x="100" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

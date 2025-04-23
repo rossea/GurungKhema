@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="vowelsignuucomb-GurungKhema" format="2">
+  <advance width="0"/>
+  <unicode hex="16122"/>
+  <outline>
+    <contour>
+      <point x="-169" y="1723" type="line"/>
+      <point x="-169" y="1321" type="line"/>
+      <point x="-1027" y="1321" type="line"/>
+      <point x="-1027" y="1437" type="line"/>
+      <point x="-285" y="1437" type="line"/>
+      <point x="-285" y="1723" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1027" y="1230" type="line"/>
+      <point x="-169" y="1230" type="line"/>
+      <point x="-169" y="1125" type="line"/>
+      <point x="-1027" y="1125" type="line"/>
+    </contour>
+  </outline>
+</glyph>

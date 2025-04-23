@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="pa-GurungKhema" format="2">
+  <advance width="922"/>
+  <unicode hex="16115"/>
+  <outline>
+    <contour>
+      <point x="922" y="1024" type="line"/>
+      <point x="922" y="922" type="line"/>
+      <point x="262" y="922" type="line"/>
+      <point x="262" y="616" type="line"/>
+      <point x="367" y="733"/>
+      <point x="537" y="733" type="qcurve"/>
+      <point x="704" y="733"/>
+      <point x="802" y="626" type="qcurve"/>
+      <point x="897" y="522"/>
+      <point x="895" y="354" type="qcurve"/>
+      <point x="893" y="194"/>
+      <point x="681" y="-3"/>
+      <point x="520" y="-2" type="qcurve"/>
+      <point x="394" y="-1"/>
+      <point x="338" y="35" type="qcurve"/>
+      <point x="141" y="163"/>
+      <point x="141" y="369" type="qcurve"/>
+      <point x="141" y="922" type="line"/>
+      <point x="0" y="922" type="line"/>
+      <point x="0" y="1024" type="line"/>
+    </contour>
+    <contour>
+      <point x="283" y="145"/>
+      <point x="516" y="117" type="qcurve"/>
+      <point x="765" y="131"/>
+      <point x="784" y="344" type="qcurve"/>
+      <point x="786" y="367"/>
+      <point x="786" y="370" type="qcurve"/>
+      <point x="786" y="478"/>
+      <point x="708" y="547" type="qcurve"/>
+      <point x="633" y="612"/>
+      <point x="524" y="612" type="qcurve"/>
+      <point x="346" y="594"/>
+      <point x="262" y="453" type="qcurve"/>
+      <point x="262" y="342" type="line"/>
+    </contour>
+  </outline>
+</glyph>

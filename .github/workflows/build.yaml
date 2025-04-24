@@ -152,72 +152,72 @@ jobs:
   #         name: regression
   #         path: out
 
-  report:
-    name: Rebuild website
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    needs:
-      - fontbakery-googlefonts
-      - proof
-      - regression
-    steps:
-      - uses: actions/checkout@v4
-      - name: Download font zip
-        uses: actions/download-artifact@v4
-        with:
-          name: fontbuild
-          path: fonts
-      - name: Download fontbakery-googlefonts zip
-        uses: actions/download-artifact@v4
-        with:
-          name: fontbakery-googlefonts
-          path: out
-      - name: Download proof zip
-        uses: actions/download-artifact@v4
-        with:
-          name: proof
-          path: out
-        continue-on-error: true
-      - name: Download regression test zip
-        uses: actions/download-artifact@v4
-        with:
-          name: regression
-          path: out
-        continue-on-error: true
-      - name: Install pkg-config python3-dev
-        run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - name: Install the latest version of uv
-        uses: eifinger/setup-uv@v1
-        with:
-          enable-cache: true
-      - name: Install Python deps
-        run: |
-          uv venv venv; . venv/bin/activate ; uv pip install -r requirements.txt
-          touch venv/touchfile
-      - name: Rebuild website
-        run: . venv/bin/activate; python3 -m notobuilder.ghpages
-      - name: Copy fonts to gh-pages dir
-        run: cp -r fonts out
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-      - name: gen zip file name
-        id: zip-name
-        shell: bash
-        # Set the archive name to repo name + "-assets" e.g "MavenPro-assets"
-        run: echo "ZIP_NAME="GurungKhema-assets"-fonts" >> $GITHUB_ENV
-      - name: Archive artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.ZIP_NAME }}
-          path: out
+  # report:
+  #   name: Rebuild website
+  #   if: github.ref == 'refs/heads/main'
+  #   runs-on: ubuntu-latest
+  #   needs:
+  #     - fontbakery-googlefonts
+  #     - proof
+  #     - regression
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Download font zip
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: fontbuild
+  #         path: fonts
+  #     - name: Download fontbakery-googlefonts zip
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: fontbakery-googlefonts
+  #         path: out
+  #     - name: Download proof zip
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: proof
+  #         path: out
+  #       continue-on-error: true
+  #     - name: Download regression test zip
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: regression
+  #         path: out
+  #       continue-on-error: true
+  #     - name: Install pkg-config python3-dev
+  #       run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.11"
+  #     - name: Install the latest version of uv
+  #       uses: eifinger/setup-uv@v1
+  #       with:
+  #         enable-cache: true
+  #     - name: Install Python deps
+  #       run: |
+  #         uv venv venv; . venv/bin/activate ; uv pip install -r requirements.txt
+  #         touch venv/touchfile
+  #     - name: Rebuild website
+  #       run: . venv/bin/activate; python3 -m notobuilder.ghpages
+  #     - name: Copy fonts to gh-pages dir
+  #       run: cp -r fonts out
+  #     - name: Deploy
+  #       uses: peaceiris/actions-gh-pages@v4
+  #       if: ${{ github.ref == 'refs/heads/main' }}
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./out
+  #     - name: gen zip file name
+  #       id: zip-name
+  #       shell: bash
+  #       # Set the archive name to repo name + "-assets" e.g "MavenPro-assets"
+  #       run: echo "ZIP_NAME="GurungKhema-assets"-fonts" >> $GITHUB_ENV
+  #     - name: Archive artifacts
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: ${{ env.ZIP_NAME }}
+  #         path: out
 
   create_release:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')

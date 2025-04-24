@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: gerlero/apt-install@v1
       with:
-          packages: pkg-config meson
+          packages: meson libcairo2-dev pkg-config python3-dev
     - uses: actions/checkout@v4
 
     - name: Install dependencies

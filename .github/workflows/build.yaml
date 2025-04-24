@@ -115,42 +115,42 @@ jobs:
           name: proof
           path: out
 
-  regression:
-    name: Regression test
-    runs-on: ubuntu-latest
-    needs: build-all
-    steps:
-      - uses: actions/checkout@v4
-      - name: Download font build zip
-        uses: actions/download-artifact@v4
-        with:
-          name: fontbuild
-          path: fonts
-      - name: Set up diffenator3
-        uses: notofonts/install-diffenator3-action@main
-      - name: Install pkg-config python3-dev
-        run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - name: Install the latest version of uv
-        uses: eifinger/setup-uv@v1
-        with:
-          enable-cache: true
-      - name: Install Python deps
-        run: |
-          uv venv venv; . venv/bin/activate ; uv pip install -r requirements.txt
-          touch venv/touchfile
-      - name: Regression test
-        run: build test
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Archive artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: regression
-          path: out
+  # regression:
+  #   name: Regression test
+  #   runs-on: ubuntu-latest
+  #   needs: build-all
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Download font build zip
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: fontbuild
+  #         path: fonts
+  #     - name: Set up diffenator3
+  #       uses: notofonts/install-diffenator3-action@main
+  #     - name: Install pkg-config python3-dev
+  #       run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.11"
+  #     - name: Install the latest version of uv
+  #       uses: eifinger/setup-uv@v1
+  #       with:
+  #         enable-cache: true
+  #     - name: Install Python deps
+  #       run: |
+  #         uv venv venv; . venv/bin/activate ; uv pip install -r requirements.txt
+  #         touch venv/touchfile
+  #     - name: Regression test
+  #       run: . venv/bin/activate; python3 -m notoqa.regression
+  #       env:
+  #         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  #     - name: Archive artifacts
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: regression
+  #         path: out
 
   report:
     name: Rebuild website

@@ -1,3 +1,11 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 jobs:
   build_font:
     uses: notofonts/notobuilder/.github/workflows/build.yaml@main

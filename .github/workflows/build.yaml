@@ -20,8 +20,8 @@ jobs:
     - name: Build font
       run: make build
 
-    - name: Build proof
-      run: make proof
+    # - name: Build proof
+    #   run: make proof
 
     - name: Build tests
       run: make test

@@ -128,6 +128,8 @@ jobs:
           path: fonts
       - name: Set up diffenator3
         uses: notofonts/install-diffenator3-action@main
+      - name: Install pkg-config python3-dev
+        run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -182,6 +184,8 @@ jobs:
           name: regression
           path: out
         continue-on-error: true
+      - name: Install pkg-config python3-dev
+        run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

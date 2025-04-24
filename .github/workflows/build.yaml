@@ -92,6 +92,8 @@ jobs:
         with:
           name: fontbuild
           path: fonts
+      - name: Install pkg-config python3-dev
+        run: sudo apt-get install libxml2-dev libxslt1-dev meson libcairo2-dev pkg-config python3-dev
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

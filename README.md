@@ -1,17 +1,6 @@
 # Noto GurungKhema
 
-[![][Fontbakery]](https://github.com/rossea/GurungKhema/fontbakery/fontbakery-report.html)
-[![][Universal]](https://github.com/rossea/GurungKhema/fontbakery/fontbakery-report.html)
-[![][GF Profile]](https://github.com/rossea/GurungKhema/fontbakery/fontbakery-report.html)
-[![][Outline Correctness]](https://github.com/rossea/GurungKhema/fontbakery/fontbakery-report.html)
-[![][Shaping]](https://github.com/rossea/GurungKhema/fontbakery/fontbakery-report.html)
-
-[Fontbakery]: https://github.com/rossea/GurungKhema/blob/main/out/badges/overall.json
-[GF Profile]: https://img.shields.io/endpoint?url=https://github.com/rossea/GurungKhema/blob/main/out/badges/GoogleFonts.json
-[Noto Profile]: https://img.shields.io/endpoint?url=https://github.com/rossea/GurungKhema/blob/main/out/badges/NotoFonts.json
-[Outline Correctness]: https://img.shields.io/endpoint?url=https://github.com/rossea/GurungKhema/blob/main/out/badges/OutlineCorrectnessChecks.json
-[Shaping]: https://img.shields.io/endpoint?url=https://github.com/rossea/GurungKhema/blob/main/out/badges/ShapingChecks.json
-[Universal]: https://img.shields.io/endpoint?url=https://github.com/rossea/GurungKhema/blob/main/out/badges/Universal.json
+[![Build CI](https://github.com/rossea/GurungKhema/actions/workflows/build.yaml/badge.svg)](https://github.com/rossea/GurungKhema/actions/workflows/build.yaml)
 
 ## Building
 

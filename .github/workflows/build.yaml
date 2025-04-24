@@ -212,7 +212,7 @@ jobs:
         id: zip-name
         shell: bash
         # Set the archive name to repo name + "-assets" e.g "MavenPro-assets"
-        run: echo "ZIP_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')-fonts" >> $GITHUB_ENV
+        run: echo "ZIP_NAME="GurungKhema-assets"-fonts" >> $GITHUB_ENV
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
